@@ -16,25 +16,99 @@
             background-color: #fcfaff;
             color: #333;
             line-height: 1.6;
+            overflow-x: hidden; /* Prevent scrolling when menu is open */
         }
 
+        /* --- Header & Logo --- */
         header {
             background-color: #ffffff;
-            padding: 20px;
+            padding: 10px 20px;
             text-align: center;
             border-bottom: 1px solid #ebdfff;
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Update this image filename to match your upload exactly */
+        .logo-img {
+            height: 50px;
+            width: auto;
+            border-radius: 50%; /* optional, if you want it circular */
         }
 
         header h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #5a3d7c;
             letter-spacing: 2px;
             text-transform: lowercase;
+            margin: 0;
         }
 
+        /* --- Hamburger Menu Icon --- */
+        .menu-icon {
+            cursor: pointer;
+            font-size: 2rem;
+            color: #5a3d7c;
+            user-select: none;
+            padding: 10px;
+        }
+
+        /* --- Side Menu Sidenav --- */
+        .sidenav {
+            height: 100%;
+            width: 0; /* Default hidden width */
+            position: fixed;
+            z-index: 2000; /* Higher than header */
+            top: 0;
+            right: 0;
+            background-color: #f5eeff;
+            overflow-x: hidden;
+            transition: 0.4s; /* Sliding transition */
+            padding-top: 60px;
+            border-left: 1px solid #ebdfff;
+            box-shadow: -4px 0 15px rgba(149, 117, 205, 0.1);
+        }
+
+        .sidenav a {
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #4a2e6d;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #9575cd;
+            background-color: #ffffff;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: #9e8fb2;
+        }
+
+        /* --- Main Content Styling (Adjust for menu open) --- */
+        #main {
+            transition: margin-right .4s;
+        }
+
+        /* Base Content styling */
         .hero {
             text-align: center;
             padding: 60px 20px;
@@ -162,56 +236,89 @@
 </head>
 <body>
 
-    <header>
-        <h1>the.sticheryy</h1>
-    </header>
-
-    <section class="hero">
-        <h2>Handmade Crochet Bags & Cute Goods</h2>
-        <p>Custom-made crochet clutches, bags, accessories, and plushies. Every single piece is stitched by hand with love.</p>
-    </section>
-
-    <div class="container">
-        <h3>Our Creations</h3>
-        <div class="grid">
-            <!-- Product 1 -->
-            <div class="card">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMzUwIiB2aWV3Qm94PSIwIDAgNTAwIDM1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y0ZTBmZiIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ1NlZ29lIFVJJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM3ZTU3YzIiPkV4YW1wbGU8L3RleHQ+Cjwvc3ZnPg==" alt="Example Placeholder">
-                <div class="card-info">
-                    <h4>Crochet Bags & Clutches</h4>
-                    <p>Beautifully textured, handmade bags and statement clutches to match any outfit.</p>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="card">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMzUwIiB2aWV3Qm94PSIwIDAgNTAwIDM1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y0ZTBmZiIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ1NlZ29lIFVJJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM3ZTU3YzIiPkV4YW1wbGU8L3RleHQ+Cjwvc3ZnPg==" alt="Example Placeholder">
-                <div class="card-info">
-                    <h4>Desk Accessories</h4>
-                    <p>Cozy crochet cup holders and coasters to keep your workspace looking aesthetic.</p>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="card">
-                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMzUwIiB2aWV3Qm94PSIwIDAgNTAwIDM1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y0ZTBmZiIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ1NlZ29lIFVJJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM3ZTU3YzIiPkV4YW1wbGU8L3RleHQ+Cjwvc3ZnPg==" alt="Example Placeholder">
-                <div class="card-info">
-                    <h4>Plushies & Bears</h4>
-                    <p>Adorable, soft crocheted teddy bears and custom plush items made to order.</p>
-                </div>
-            </div>
-        </div>
-
-        <h3>Place an Order</h3>
-        <div class="contact-section">
-            <p>See something you love or want a custom color? Drop a message in our Instagram DMs to check availability or request a custom order.</p>
-            <a href="https://instagram.com/" class="btn" target="_blank">Send a DM to Order</a>
-        </div>
+    <!-- Sidenav Side Menu -->
+    <div id="mySidenav" class="sidenav">
+        <span class="closebtn" onclick="closeNav()">&times;</span>
+        <a href="#about">About Us</a>
+        <a href="#page">Visit Our Page</a>
+        <a href="#products">Discover Our Products</a>
+        <a href="#more">More</a>
     </div>
 
-    <footer>
-        <p>&copy; 2026 the.sticheryy. All rights reserved.</p>
-    </footer>
+    <!-- Header containing Logo and Menu Icon -->
+    <header>
+        <div class="logo-container">
+            <!-- Ensure this filename is correct! -->
+            <img src="WhatsApp Image 2026-07-18 at 1.03.47 AM.jpeg" alt="the.sticheryy Logo" class="logo-img">
+            <h1>the.sticheryy</h1>
+        </div>
+        <div class="menu-icon" onclick="openNav()">&#9776;</div> <!-- Hamburger icon -->
+    </header>
+
+    <!-- Main Content wrapper -->
+    <div id="main">
+        <section class="hero">
+            <h2>Handmade Crochet Bags & Cute Goods</h2>
+            <p>Custom-made crochet clutches, bags, accessories, and plushies. Every single piece is stitched by hand with love.</p>
+        </section>
+
+        <div class="container" id="products">
+            <h3>Our Creations</h3>
+            <div class="grid">
+                <!-- Product 1 -->
+                <div class="card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMzUwIiB2aWV3Qm94PSIwIDAgNTAwIDM1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y0ZTBmZiIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ1NlZ29lIFVJJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM3ZTU3YzIiPkV4YW1wbGU8L3RleHQ+Cjwvc3ZnPg==" alt="Example Placeholder">
+                    <div class="card-info">
+                        <h4>Crochet Bags & Clutches</h4>
+                        <p>Beautifully textured, handmade bags and statement clutches to match any outfit.</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMzUwIiB2aWV3Qm94PSIwIDAgNTAwIDM1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y0ZTBmZiIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ1NlZ29lIFVJJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM3ZTU3YzIiPkV4YW1wbGU8L3RleHQ+Cjwvc3ZnPg==" alt="Example Placeholder">
+                    <div class="card-info">
+                        <h4>Desk Accessories</h4>
+                        <p>Cozy crochet cup holders and coasters to keep your workspace looking aesthetic.</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="card">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMzUwIiB2aWV3Qm94PSIwIDAgNTAwIDM1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y0ZTBmZiIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ1NlZ29lIFVJJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM3ZTU3YzIiPkV4YW1wbGU8L3RleHQ+Cjwvc3ZnPg==" alt="Example Placeholder">
+                    <div class="card-info">
+                        <h4>Plushies & Bears</h4>
+                        <p>Adorable, soft crocheted teddy bears and custom plush items made to order.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Place an Order</h3>
+            <div class="contact-section" id="more">
+                <p>See something you love or want a custom color? Drop a message in our Instagram DMs to check availability or request a custom order.</p>
+                <a href="https://instagram.com/" class="btn" target="_blank">Send a DM to Order</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 the.sticheryy. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- JavaScript to Handle the Menu Animation -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px"; /* Set open width */
+            // optional: pushes the main content to the left
+            // document.getElementById("main").style.marginRight = "250px"; 
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0"; /* Set hidden width */
+            // optional: restores main content margin
+            // document.getElementById("main").style.marginRight = "0";
+        }
+    </script>
 
 </body>
 </html>
