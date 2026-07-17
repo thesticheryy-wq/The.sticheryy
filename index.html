@@ -38,7 +38,7 @@
         .hero {
             text-align: center;
             padding: 60px 20px;
-            background: linear-gradient(rgba(253, 251, 255, 0.85), rgba(253, 251, 255, 0.85)), url('https://images.unsplash.com/photo-1608748010899-18f300247112?q=80&w=1000') no-repeat center center/cover;
+            background-color: #f5eeff;
             border-bottom: 1px solid #ebdfff;
         }
 
@@ -81,7 +81,7 @@
         /* Products Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-bottom: 60px;
         }
@@ -103,6 +103,7 @@
             width: 100%;
             height: 250px;
             object-fit: cover;
+            display: block;
         }
 
         .card-info {
@@ -175,7 +176,7 @@
         <div class="grid">
             <!-- Product 1 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1629541999961-71fb2c31cae1?q=80&w=500" alt="Crochet Bag">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMzUwIiB2aWV3Qm94PSIwIDAgNTAwIDM1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y0ZTBmZiIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ1NlZ29lIFVJJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM3ZTU3YzIiPkV4YW1wbGU8L3RleHQ+Cjwvc3ZnPg==" alt="Example Placeholder">
                 <div class="card-info">
                     <h4>Crochet Bags & Clutches</h4>
                     <p>Beautifully textured, handmade bags and statement clutches to match any outfit.</p>
@@ -184,7 +185,7 @@
 
             <!-- Product 2 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=500" alt="Desk Cup Coasters">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMzUwIiB2aWV3Qm94PSIwIDAgNTAwIDM1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y0ZTBmZiIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ1NlZ29lIFVJJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM3ZTU3YzIiPkV4YW1wbGU8L3RleHQ+Cjwvc3ZnPg==" alt="Example Placeholder">
                 <div class="card-info">
                     <h4>Desk Accessories</h4>
                     <p>Cozy crochet cup holders and coasters to keep your workspace looking aesthetic.</p>
@@ -193,7 +194,7 @@
 
             <!-- Product 3 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1615486511487-12f377cc4a56?q=80&w=500" alt="Crochet Teddy Bear">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MDAiIGhlaWdodD0iMzUwIiB2aWV3Qm94PSIwIDAgNTAwIDM1MCI+CiAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2Y0ZTBmZiIvPgogIDx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBkb21pbmFudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iJ1NlZ29lIFVJJywgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM3ZTU3YzIiPkV4YW1wbGU8L3RleHQ+Cjwvc3ZnPg==" alt="Example Placeholder">
                 <div class="card-info">
                     <h4>Plushies & Bears</h4>
                     <p>Adorable, soft crocheted teddy bears and custom plush items made to order.</p>
@@ -204,7 +205,6 @@
         <h3>Place an Order</h3>
         <div class="contact-section">
             <p>See something you love or want a custom color? Drop a message in our Instagram DMs to check availability or request a custom order.</p>
-            <!-- Replace the link below with your actual Instagram link when you're ready -->
             <a href="https://instagram.com/" class="btn" target="_blank">Send a DM to Order</a>
         </div>
     </div>
