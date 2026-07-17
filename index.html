@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The.sticheryy | Handmade Crochet Bags & Goods</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fcfaff;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ebdfff;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            color: #5a3d7c;
+            letter-spacing: 2px;
+            text-transform: lowercase;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(rgba(253, 251, 255, 0.85), rgba(253, 251, 255, 0.85)), url('https://images.unsplash.com/photo-1608748010899-18f300247112?q=80&w=1000') no-repeat center center/cover;
+            border-bottom: 1px solid #ebdfff;
+        }
+
+        .hero h2 {
+            font-size: 2.3rem;
+            margin-bottom: 10px;
+            color: #4a2e6d;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #6c528d;
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: #4a2e6d;
+            position: relative;
+        }
+
+        h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #b39ddb;
+            margin: 10px auto 0;
+        }
+
+        /* Products Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(149, 117, 205, 0.08);
+            border: 1px solid #ebdfff;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 20px;
+        }
+
+        .card-info h4 {
+            margin-bottom: 8px;
+            font-size: 1.25rem;
+            color: #4a2e6d;
+        }
+
+        .card-info p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #fff;
+            border: 1px solid #ebdfff;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 15px rgba(149, 117, 205, 0.05);
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #9575cd;
+            color: white;
+            padding: 12px 35px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background 0.2s;
+            box-shadow: 0 4px 10px rgba(149, 117, 205, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #7e57c2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #9e8fb2;
+            font-size: 0.9rem;
+            border-top: 1px solid #ebdfff;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>the.sticheryy</h1>
+    </header>
+
+    <section class="hero">
+        <h2>Handmade Crochet Bags & Cute Goods</h2>
+        <p>Custom-made crochet clutches, bags, accessories, and plushies. Every single piece is stitched by hand with love.</p>
+    </section>
+
+    <div class="container">
+        <h3>Our Creations</h3>
+        <div class="grid">
+            <!-- Product 1 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1629541999961-71fb2c31cae1?q=80&w=500" alt="Crochet Bag">
+                <div class="card-info">
+                    <h4>Crochet Bags & Clutches</h4>
+                    <p>Beautifully textured, handmade bags and statement clutches to match any outfit.</p>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=500" alt="Desk Cup Coasters">
+                <div class="card-info">
+                    <h4>Desk Accessories</h4>
+                    <p>Cozy crochet cup holders and coasters to keep your workspace looking aesthetic.</p>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1615486511487-12f377cc4a56?q=80&w=500" alt="Crochet Teddy Bear">
+                <div class="card-info">
+                    <h4>Plushies & Bears</h4>
+                    <p>Adorable, soft crocheted teddy bears and custom plush items made to order.</p>
+                </div>
+            </div>
+        </div>
+
+        <h3>Place an Order</h3>
+        <div class="contact-section">
+            <p>See something you love or want a custom color? Drop a message in our Instagram DMs to check availability or request a custom order.</p>
+            <!-- Replace the link below with your actual Instagram link when you're ready -->
+            <a href="https://instagram.com/" class="btn" target="_blank">Send a DM to Order</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 the.sticheryy. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
