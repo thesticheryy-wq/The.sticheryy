@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The.sticheryy | Handmade Crochet Goods</title>
+    <title>The.sticheryy | Handmade Crochet Collective</title>
     <style>
         * {
             box-sizing: border-box;
@@ -13,17 +13,17 @@
         }
 
         body {
-            background: radial-gradient(circle at 50% 0%, #fbf8ff 0%, #f6efff 100%);
+            background: linear-gradient(180deg, #fbf9ff 0%, #fffbf5 50%, #f6efff 100%);
             color: #3d2c54;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* --- Floating Header --- */
+        /* --- Floating Blurred Header --- */
         header {
-            background-color: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
             padding: 10px 30px;
             position: sticky;
             top: 0;
@@ -32,7 +32,7 @@
             justify-content: space-between;
             align-items: center;
             height: 75px;
-            border-bottom: 1px solid rgba(235, 223, 255, 0.5);
+            border-bottom: 1px solid rgba(235, 223, 255, 0.4);
         }
 
         .logo-container {
@@ -45,7 +45,7 @@
             height: 52px;
             width: auto;
             border-radius: 50%;
-            box-shadow: 0 0 15px rgba(149, 117, 205, 0.2);
+            box-shadow: 0 0 20px rgba(149, 117, 205, 0.25);
         }
 
         header h1 {
@@ -77,15 +77,15 @@
             z-index: 2000;
             top: 20px;
             right: 20px;
-            background-color: rgba(253, 251, 255, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
+            background-color: rgba(253, 251, 255, 0.75);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
             overflow-x: hidden;
             transition: 0.5s cubic-bezier(0.1, 0.8, 0.3, 1);
             padding-top: 60px;
-            border: 1px solid rgba(255, 255, 255, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 24px;
-            box-shadow: 0 15px 35px rgba(130, 90, 180, 0.12);
+            box-shadow: 0 15px 40px rgba(130, 90, 180, 0.15);
         }
 
         .sidenav a {
@@ -101,7 +101,7 @@
 
         .sidenav a:hover {
             color: #9575cd;
-            background-color: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 255, 255, 0.8);
             transform: translateX(-5px);
         }
 
@@ -117,12 +117,12 @@
         /* --- Magical Aura Hero Frame --- */
         .hero {
             text-align: center;
-            padding: 90px 20px;
+            padding: 100px 20px;
             position: relative;
         }
 
         .hero h2 {
-            font-size: 2.6rem;
+            font-size: 2.8rem;
             margin-bottom: 15px;
             color: #3b205a;
             font-weight: 400;
@@ -130,25 +130,27 @@
         }
 
         .hero p {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             color: #725992;
-            max-width: 580px;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+        }
+
+        /* --- Seamless Statement Section --- */
+        .about-section {
+            padding: 20px 20px 60px;
+            text-align: center;
+            max-width: 780px;
             margin: 0 auto;
         }
 
-        /* --- Seamless About Section --- */
-        .about-section {
-            padding: 40px 20px;
-            text-align: center;
-            max-width: 750px;
-            margin: 0 auto 30px;
-        }
-
         .about-section p {
-            font-size: 1.2rem;
-            color: #513970;
-            line-height: 1.8;
+            font-size: 1.25rem;
+            color: #5a3d7c;
+            line-height: 1.9;
             font-weight: 300;
+            font-style: italic;
         }
 
         .container {
@@ -159,40 +161,46 @@
 
         h3 {
             text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 40px;
+            font-size: 2rem;
+            margin-bottom: 45px;
             color: #3b205a;
             font-weight: 400;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: lowercase;
         }
 
-        /* --- Dreamy Borderless Seamless Grid --- */
+        /* --- Seamless Organic Item Grid --- */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            margin-bottom: 80px;
+            gap: 50px;
+            margin-bottom: 90px;
         }
 
         .item-flow {
             position: relative;
-            transition: transform 0.4s ease;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .item-flow:hover {
-            transform: translateY(-6px);
+            transform: translateY(-8px);
         }
 
         .img-wrapper {
             position: relative;
             width: 100%;
-            height: 320px;
-            border-radius: 20px;
+            height: 340px;
+            border-radius: 30px;
             overflow: hidden;
-            box-shadow: 0 10px 25px rgba(150, 120, 190, 0.08);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            transition: box-shadow 0.4s ease;
         }
+
+        /* Ambient color-matched glows instead of structural borders */
+        .glow-purple { box-shadow: 0 15px 35px rgba(162, 116, 255, 0.15); }
+        .glow-sunset { box-shadow: 0 15px 35px rgba(255, 166, 116, 0.2); }
+        .glow-peach { box-shadow: 0 15px 35px rgba(255, 138, 128, 0.2); }
+        .glow-coral { box-shadow: 0 15px 35px rgba(255, 110, 145, 0.2); }
 
         .img-wrapper svg, .img-wrapper img {
             width: 100%;
@@ -202,87 +210,99 @@
         }
 
         .item-flow:hover .img-wrapper svg {
-            transform: scale(1.03);
+            transform: scale(1.04);
         }
 
         .info-flow {
             text-align: center;
-            padding: 0 10px;
+            padding: 0 15px;
         }
 
         .info-flow h4 {
-            font-size: 1.3rem;
-            color: #432962;
-            margin-bottom: 6px;
-            font-weight: 500;
+            font-size: 1.35rem;
+            color: #3b205a;
+            margin-bottom: 8px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
         }
 
         .info-flow p {
             color: #7b6893;
-            font-size: 0.95rem;
+            font-size: 0.98rem;
+            font-weight: 300;
         }
 
-        /* --- Soft Shimmering Color Fills --- */
-        .fill-lavender { fill: #f3ecff; }
-        .fill-mist { fill: #edf4ff; }
-        .fill-blush { fill: #fff0f7; }
+        /* --- Magical Summer Purple Tone Gradients --- */
+        .fill-purple { background: linear-gradient(135deg, #f4eeff 0%, #e5daf7 100%); }
+        .fill-sunset { background: linear-gradient(135deg, #fdf1e6 0%, #fbdcc4 100%); }
+        .fill-peach { background: linear-gradient(135deg, #fff0f0 0%, #ffcfcf 100%); }
+        .fill-coral { background: linear-gradient(135deg, #fff0f5 0%, #f7cadb 100%); }
 
-        /* --- Elite High-End Request Section --- */
+        /* Typography Styling Inside SVG Placeholders */
+        .svg-text-purple { font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: 300; fill: #6d4b96; letter-spacing: 2px; }
+        .svg-text-summer { font-family: 'Segoe UI', sans-serif; font-size: 14px; font-weight: 300; fill: #b26037; letter-spacing: 2px; }
+
+        /* --- Section Divider Headers --- */
+        .section-divider {
+            margin-top: 40px;
+            border-top: 1px dashed rgba(149, 117, 205, 0.2);
+            padding-top: 80px;
+        }
+
+        /* --- Elite High-End Request Frame --- */
         .contact-section {
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
-            max-width: 650px;
-            margin: 40px auto 80px;
-            position: relative;
+            max-width: 700px;
+            margin: 40px auto 100px;
         }
 
         .contact-section p {
-            font-size: 1.1rem;
+            font-size: 1.15rem;
             color: #513970;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
+            font-weight: 300;
         }
 
         .btn {
             display: inline-block;
-            background: linear-gradient(135deg, #9b7fd4 0%, #8561cc 100%);
+            background: linear-gradient(135deg, #a48be0 0%, #7c52cc 100%);
             color: white;
-            padding: 14px 40px;
+            padding: 15px 45px;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 40px;
             font-weight: 500;
             letter-spacing: 1px;
-            margin-top: 15px;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(149, 117, 205, 0.25);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 25px rgba(124, 82, 204, 0.25);
         }
 
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 12px 25px rgba(149, 117, 205, 0.35);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(124, 82, 204, 0.4);
         }
 
         footer {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             color: #b09ebb;
             font-size: 0.85rem;
-            border-top: 1px solid rgba(235, 223, 255, 0.4);
+            border-top: 1px solid rgba(235, 223, 255, 0.3);
         }
     </style>
 </head>
 <body>
 
-    <!-- Sidenav Sidebar Menu -->
+    <!-- Floating, High-Blur Sidenav Menu -->
     <div id="mySidenav" class="sidenav">
         <span class="closebtn" onclick="closeNav()">&times;</span>
         <a href="#about" onclick="closeNav()">About Us</a>
         <a href="https://instagram.com/" target="_blank">Visit Our Page</a>
-        <a href="#products" onclick="closeNav()">Discover Our Products</a>
-        <!-- This link opens the new summer tab perfectly -->
-        <a href="summer.html" target="_blank" onclick="closeNav()">Limited Edition / Summer Edition</a>
+        <a href="#main-collection" onclick="closeNav()">Main Collection</a>
+        <a href="#summer-edition" onclick="closeNav()">Limited Summer Edition '26</a>
     </div>
 
-    <!-- Header Frame -->
+    <!-- Header -->
     <header>
         <div class="logo-container">
             <img src="WhatsApp Image 2026-07-18 at 1.03.47 AM.jpeg" alt="the.sticheryy Logo" class="logo-img">
@@ -292,62 +312,99 @@
     </header>
 
     <div id="main">
-        <!-- Hero Display Section -->
+        <!-- Hero Introduction Display -->
         <section class="hero">
-            <h2>Handmade Crochet Bags & Cute Goods</h2>
-            <p>Thoughtfully crafted original pieces woven to capture a dreamy, personalized aesthetic.</p>
+            <h2>handmade crochet goods</h2>
+            <p>Thoughtfully crafted original pieces woven to capture a dreamy, high-end seasonal aesthetic.</p>
         </section>
 
-        <!-- Dynamic Context-Driven About Frame -->
+        <!-- Brand Value Statement Frame -->
         <div class="container" id="about">
             <div class="about-section">
-                <p>Every single piece is created with love. Woven meticulously one stitch at a time to create a durable, soft texture with an authentic handmade magic that is completely unique to you.</p>
+                <p>Every single piece is created with love. Meticulously handcrafted one precise stitch at a time to merge striking color patterns with soft, enduring textures tailored entirely to your personal style.</p>
             </div>
         </div>
 
-        <div class="container" id="products">
-            <h3>discover our products</h3>
+        <div class="container">
             
-            <!-- Seamless Unified Order Flow Grid -->
+            <!-- SECTION 1: Summer Edition 2026 (Warm Summer Tones mixed with Brand Purple) -->
+            <h3 id="summer-edition">limited edition / summer edition 2026</h3>
             <div class="grid">
-                <!-- Item 1 -->
+                <!-- Summer Item 1: Bags/Clutches -->
                 <div class="item-flow">
-                    <div class="img-wrapper">
-                        <svg viewBox="0 0 100 100"><rect width="100" height="100" class="fill-lavender"/></svg>
+                    <div class="img-wrapper fill-sunset glow-sunset">
+                        <svg viewBox="0 0 100 100"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="svg-text-summer">SUMMER CLUTCH</text></svg>
                     </div>
                     <div class="info-flow">
-                        <h4>Crochet Bags & Clutches</h4>
-                        <p>Beautifully structured, hand-knitted accent bags designed for versatility.</p>
+                        <h4>Sunset Horizon Clutch</h4>
+                        <p>A brilliant sun-kissed accent statement purse woven using warm amber and gradient amethyst fibers.</p>
                     </div>
                 </div>
 
-                <!-- Item 2 -->
+                <!-- Summer Item 2: Cup Holder -->
                 <div class="item-flow">
-                    <div class="img-wrapper">
-                        <svg viewBox="0 0 100 100"><rect width="100" height="100" class="fill-mist"/></svg>
+                    <div class="img-wrapper fill-peach glow-peach">
+                        <svg viewBox="0 0 100 100"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="svg-text-summer">DESK ACCESSORY</text></svg>
                     </div>
                     <div class="info-flow">
-                        <h4>Desk Accessories</h4>
-                        <p>Tailored soft-woven protective cup sleeves and custom desk mats.</p>
+                        <h4>Sorbet Desk Sleeve</h4>
+                        <p>An aesthetic, beautifully insulated desktop cup wrap mirroring pastel coral coastal tones.</p>
                     </div>
                 </div>
 
-                <!-- Item 3 -->
+                <!-- Summer Item 3: Teddy Bears -->
                 <div class="item-flow">
-                    <div class="img-wrapper">
-                        <svg viewBox="0 0 100 100"><rect width="100" height="100" class="fill-blush"/></svg>
+                    <div class="img-wrapper fill-coral glow-coral">
+                        <svg viewBox="0 0 100 100"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="svg-text-summer">SUMMER PLUSH</text></svg>
                     </div>
                     <div class="info-flow">
-                        <h4>Plushies & Bears</h4>
-                        <p>Delicate, premium custom crochet plush toys sculpted symmetrically.</p>
+                        <h4>Misty Island Teddy</h4>
+                        <p>An elite, ultra-soft handmade collector plush bear dressed in custom light holiday beach hues.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Professionalized Client Request Frame -->
+            <!-- SECTION 2: Main Collection (Official Brand Purple Theme) -->
+            <h3 id="main-collection" class="section-divider">discover our signature products</h3>
+            <div class="grid">
+                <!-- Main Item 1 -->
+                <div class="item-flow">
+                    <div class="img-wrapper fill-purple glow-purple">
+                        <svg viewBox="0 0 100 100"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="svg-text-purple">SIGNATURE BAG</text></svg>
+                    </div>
+                    <div class="info-flow">
+                        <h4>Classic Crochet Tote</h4>
+                        <p>Our staple premium shoulder bag crafted cleanly with textured, deep violet architectural lines.</p>
+                    </div>
+                </div>
+
+                <!-- Main Item 2 -->
+                <div class="item-flow">
+                    <div class="img-wrapper fill-purple glow-purple">
+                        <svg viewBox="0 0 100 100"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="svg-text-purple">COZY HOLDER</text></svg>
+                    </div>
+                    <div class="info-flow">
+                        <h4>Aesthetic Cup Cozy</h4>
+                        <p>Elegant, washable table accent loops designed to bring a cozy cloud warmth to daily workspaces.</p>
+                    </div>
+                </div>
+
+                <!-- Main Item 3 -->
+                <div class="item-flow">
+                    <div class="img-wrapper fill-purple glow-purple">
+                        <svg viewBox="0 0 100 100"><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" class="svg-text-purple">CLASSIC BEAR</text></svg>
+                    </div>
+                    <div class="info-flow">
+                        <h4>The Heirloom Teddy</h4>
+                        <p>Timeless soft-woven luxury plush toys sculpted symmetrically using premium organic yarn blends.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Acquisition/Request Section -->
             <div class="contact-section">
-                <p>To request a custom configuration, bespoke color tailoring, or to acquire a piece from an active lineup, please coordinate your details directly with us.</p>
-                <a href="https://instagram.com/" class="btn" target="_blank">Submit Bespoke Request via DM</a>
+                <p>To request a tailored configuration, bespoke color balances, or to acquire an original piece from our active seasonal collections, connect with our studio directly.</p>
+                <a href="https://instagram.com/" class="btn" target="_blank">Submit Commission Request via DM</a>
             </div>
         </div>
 
