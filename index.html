@@ -13,25 +13,26 @@
         }
 
         body {
-            background-color: #fcfaff;
-            color: #333;
+            background: radial-gradient(circle at 50% 0%, #fbf8ff 0%, #f6efff 100%);
+            color: #3d2c54;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* --- Dynamic Header --- */
+        /* --- Floating Header --- */
         header {
-            background-color: #ffffff;
-            padding: 10px 20px;
-            text-align: center;
-            border-bottom: 1px solid #ebdfff;
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 10px 30px;
             position: sticky;
             top: 0;
             z-index: 1000;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
+            height: 75px;
+            border-bottom: 1px solid rgba(235, 223, 255, 0.5);
         }
 
         .logo-container {
@@ -41,36 +42,31 @@
         }
 
         .logo-img {
-            height: 50px;
+            height: 52px;
             width: auto;
             border-radius: 50%;
+            box-shadow: 0 0 15px rgba(149, 117, 205, 0.2);
         }
 
         header h1 {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             color: #5a3d7c;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: lowercase;
             margin: 0;
-            animation: pulseText 3s infinite alternate;
-        }
-
-        @keyframes pulseText {
-            0% { transform: scale(1); opacity: 0.9; }
-            100% { transform: scale(1.03); opacity: 1; }
+            font-weight: 400;
         }
 
         .menu-icon {
             cursor: pointer;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #5a3d7c;
             user-select: none;
-            padding: 10px;
-            transition: transform 0.3s;
+            transition: transform 0.4s ease;
         }
 
         .menu-icon:hover {
-            transform: rotate(90deg);
+            transform: scale(1.1) rotate(15deg);
         }
 
         /* --- Floating Transparent Sidebar --- */
@@ -81,259 +77,212 @@
             z-index: 2000;
             top: 20px;
             right: 20px;
-            background-color: rgba(245, 238, 255, 0.75);
-            backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
+            background-color: rgba(253, 251, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             overflow-x: hidden;
             transition: 0.5s cubic-bezier(0.1, 0.8, 0.3, 1);
             padding-top: 60px;
-            border: 1px solid rgba(235, 223, 255, 0.6);
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(149, 117, 205, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(130, 90, 180, 0.12);
         }
 
         .sidenav a {
-            padding: 15px 30px;
+            padding: 16px 32px;
             text-decoration: none;
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             color: #4a2e6d;
             display: block;
-            transition: 0.3s;
-            border-radius: 10px;
-            margin: 5px 15px;
+            transition: 0.3s ease;
+            margin: 4px 16px;
+            border-radius: 12px;
         }
 
         .sidenav a:hover {
             color: #9575cd;
-            background-color: rgba(255, 255, 255, 0.6);
-            padding-left: 40px;
+            background-color: rgba(255, 255, 255, 0.7);
+            transform: translateX(-5px);
         }
 
         .closebtn {
             position: absolute;
             top: 15px;
             right: 25px;
-            font-size: 2.5rem;
+            font-size: 2.3rem;
             cursor: pointer;
             color: #9e8fb2;
         }
 
-        /* --- Dynamic Hero (Dreamy Violet) --- */
+        /* --- Magical Aura Hero Frame --- */
         .hero {
             text-align: center;
-            padding: 70px 20px;
-            background: linear-gradient(135deg, #f5eeff 0%, #e8ddff 100%);
-            border-bottom: 1px solid #ebdfff;
+            padding: 90px 20px;
             position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 300px;
-            height: 300px;
-            background: rgba(212, 190, 255, 0.4);
-            border-radius: 50%;
-            top: -100px;
-            left: -100px;
-            filter: blur(50px);
-            animation: floatBubble 8s infinite alternate;
-        }
-
-        @keyframes floatBubble {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(50px, 30px); }
         }
 
         .hero h2 {
-            font-size: 2.5rem;
+            font-size: 2.6rem;
             margin-bottom: 15px;
-            color: #4a2e6d;
+            color: #3b205a;
+            font-weight: 400;
+            letter-spacing: 1px;
         }
 
         .hero p {
             font-size: 1.15rem;
-            color: #6c528d;
-            max-width: 630px;
+            color: #725992;
+            max-width: 580px;
             margin: 0 auto;
         }
 
-        /* --- About Us Section --- */
+        /* --- Seamless About Section --- */
         .about-section {
-            background-color: #ffffff;
-            border: 1px solid #ebdfff;
-            padding: 40px;
-            border-radius: 12px;
+            padding: 40px 20px;
             text-align: center;
-            max-width: 800px;
-            margin: 40px auto 20px;
-            box-shadow: 0 4px 15px rgba(149, 117, 205, 0.03);
+            max-width: 750px;
+            margin: 0 auto 30px;
         }
 
         .about-section p {
-            font-size: 1.1rem;
-            color: #5a3d7c;
-            font-style: italic;
+            font-size: 1.2rem;
+            color: #513970;
+            line-height: 1.8;
+            font-weight: 300;
         }
 
         .container {
             max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin: 0 auto;
+            padding: 0 30px;
         }
 
         h3 {
             text-align: center;
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #4a2e6d;
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            color: #3b205a;
+            font-weight: 400;
+            letter-spacing: 2px;
+            text-transform: lowercase;
         }
 
-        /* --- Flat Single Row Order List (No Categories) --- */
+        /* --- Dreamy Borderless Seamless Grid --- */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-            margin-bottom: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
         }
 
-        .card {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(149, 117, 205, 0.06);
-            border: 1px solid #ebdfff;
-            transition: transform 0.3s, box-shadow 0.3s;
+        .item-flow {
+            position: relative;
+            transition: transform 0.4s ease;
         }
 
-        .card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 24px rgba(149, 117, 205, 0.15);
+        .item-flow:hover {
+            transform: translateY(-6px);
         }
 
-        .card img {
+        .img-wrapper {
+            position: relative;
             width: 100%;
-            height: 250px;
+            height: 320px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(150, 120, 190, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .img-wrapper svg, .img-wrapper img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            display: block;
+            transition: transform 0.6s ease;
         }
 
-        .card-info {
-            padding: 20px;
+        .item-flow:hover .img-wrapper svg {
+            transform: scale(1.03);
         }
 
-        .card-info h4 {
-            margin-bottom: 8px;
-            font-size: 1.25rem;
-            color: #4a2e6d;
+        .info-flow {
+            text-align: center;
+            padding: 0 10px;
         }
 
-        .card-info p {
-            color: #666;
+        .info-flow h4 {
+            font-size: 1.3rem;
+            color: #432962;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+
+        .info-flow p {
+            color: #7b6893;
             font-size: 0.95rem;
         }
 
-        /* --- Dreamy Custom Color Fills for Placeholders --- */
-        .bg-purple { fill: #f4e0ff; text-color: #7e57c2; }
-        .bg-lavender { fill: #eadeff; text-color: #673ab7; }
-        .bg-cloud { fill: #f3f0ff; text-color: #5e35b1; }
+        /* --- Soft Shimmering Color Fills --- */
+        .fill-lavender { fill: #f3ecff; }
+        .fill-mist { fill: #edf4ff; }
+        .fill-blush { fill: #fff0f7; }
 
-        /* --- Dreamy Summer Edition Section --- */
-        .summer-section {
-            display: none; /* Controlled by Javascript */
-            background: linear-gradient(135deg, #fff4cc 0%, #ffeb99 100%);
-            border: 2px dashed #ffa726;
-            padding: 40px 20px;
-            border-radius: 16px;
-            margin-bottom: 60px;
-            animation: fadeIn 0.5s ease-in-out;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .summer-section h3 {
-            color: #e65100;
-            text-shadow: 1px 1px 2px rgba(255, 235, 153, 0.5);
-        }
-
-        .summer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 25px;
-        }
-
-        .summer-card {
-            background: #fffdf7;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(230, 81, 0, 0.08);
-            border: 1px solid #ffe0b2;
-        }
-
-        .summer-card h4 {
-            color: #e65100;
-        }
-
-        /* Summer Colors for Placeholders */
-        .bg-sunset { fill: #ffe0b2; }
-        .bg-peach { fill: #ffccbc; }
-        .bg-melon { fill: #ffecb3; }
-
-        /* --- Footer & Button --- */
+        /* --- Elite High-End Request Section --- */
         .contact-section {
-            background-color: #fff;
-            border: 1px solid #ebdfff;
-            padding: 40px;
-            border-radius: 12px;
+            padding: 60px 20px;
             text-align: center;
-            max-width: 600px;
-            margin: 0 auto;
+            max-width: 650px;
+            margin: 40px auto 80px;
+            position: relative;
+        }
+
+        .contact-section p {
+            font-size: 1.1rem;
+            color: #513970;
+            margin-bottom: 10px;
         }
 
         .btn {
             display: inline-block;
-            background-color: #9575cd;
+            background: linear-gradient(135deg, #9b7fd4 0%, #8561cc 100%);
             color: white;
-            padding: 12px 35px;
+            padding: 14px 40px;
             text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            margin-top: 20px;
-            transition: background 0.2s, transform 0.2s;
-            box-shadow: 0 4px 10px rgba(149, 117, 205, 0.3);
+            border-radius: 30px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(149, 117, 205, 0.25);
         }
 
         .btn:hover {
-            background-color: #7e57c2;
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 25px rgba(149, 117, 205, 0.35);
         }
 
         footer {
             text-align: center;
             padding: 40px 20px;
-            color: #9e8fb2;
-            font-size: 0.9rem;
-            border-top: 1px solid #ebdfff;
-            margin-top: 60px;
+            color: #b09ebb;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(235, 223, 255, 0.4);
         }
     </style>
 </head>
 <body>
 
-    <!-- Floating, Transparent Sidenav Side Menu -->
+    <!-- Sidenav Sidebar Menu -->
     <div id="mySidenav" class="sidenav">
         <span class="closebtn" onclick="closeNav()">&times;</span>
         <a href="#about" onclick="closeNav()">About Us</a>
         <a href="https://instagram.com/" target="_blank">Visit Our Page</a>
         <a href="#products" onclick="closeNav()">Discover Our Products</a>
-        <a href="#summer" onclick="openSummerSection()">Limited Edition / Summer Edition</a>
+        <!-- This link opens the new summer tab perfectly -->
+        <a href="summer.html" target="_blank" onclick="closeNav()">Limited Edition / Summer Edition</a>
     </div>
 
-    <!-- Header containing Original Logo File String -->
+    <!-- Header Frame -->
     <header>
         <div class="logo-container">
             <img src="WhatsApp Image 2026-07-18 at 1.03.47 AM.jpeg" alt="the.sticheryy Logo" class="logo-img">
@@ -343,77 +292,62 @@
     </header>
 
     <div id="main">
-        <!-- Dreamy Violet Hero Frame -->
+        <!-- Hero Display Section -->
         <section class="hero">
             <h2>Handmade Crochet Bags & Cute Goods</h2>
-            <p>Stitched items built with unique care, personality, and aesthetic vibes.</p>
+            <p>Thoughtfully crafted original pieces woven to capture a dreamy, personalized aesthetic.</p>
         </section>
 
-        <!-- About Us Frame -->
+        <!-- Dynamic Context-Driven About Frame -->
         <div class="container" id="about">
             <div class="about-section">
-                <h3>About Us</h3>
-                <p>Every single piece is created with love and all of that stuff. Crafted one stitch at a time to ensure total durability, soft texture, and a unique handmade touch you won’t find anywhere else.</p>
+                <p>Every single piece is created with love. Woven meticulously one stitch at a time to create a durable, soft texture with an authentic handmade magic that is completely unique to you.</p>
             </div>
         </div>
 
-        <div class="container">
-            <!-- Dynamic Summer Section (Triggers from Sidebar) -->
-            <div id="summerSection" class="summer-section">
-                <span id="summer"></span>
-                <h3>Summer Edition 2026</h3>
-                <div class="summer-grid">
-                    <div class="summer-card">
-                        <svg width="100%" height="250"><rect width="100%" height="100%" class="bg-sunset"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e65100">Summer Example 1</text></svg>
-                        <div class="card-info">
-                            <h4>Sunset Clutch</h4>
-                            <p>Bright tones matching the golden beach hour elements.</p>
-                        </div>
-                    </div>
-                    <div class="summer-card">
-                        <svg width="100%" height="250"><rect width="100%" height="100%" class="bg-peach"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#e65100">Summer Example 2</text></svg>
-                        <div class="card-info">
-                            <h4>Peach Sorbet Pouch</h4>
-                            <p>Soft crochet pastel orange shading designed explicitly for summer storage.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Single Line Products Layout (No Separator Headings) -->
-            <h3 id="products">Discover Our Products</h3>
+        <div class="container" id="products">
+            <h3>discover our products</h3>
+            
+            <!-- Seamless Unified Order Flow Grid -->
             <div class="grid">
                 <!-- Item 1 -->
-                <div class="card">
-                    <svg width="100%" height="250"><rect width="100%" height="100%" class="bg-purple"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#7e57c2">Example</text></svg>
-                    <div class="card-info">
+                <div class="item-flow">
+                    <div class="img-wrapper">
+                        <svg viewBox="0 0 100 100"><rect width="100" height="100" class="fill-lavender"/></svg>
+                    </div>
+                    <div class="info-flow">
                         <h4>Crochet Bags & Clutches</h4>
-                        <p>Beautifully textured, handmade bags and statement clutches to match any outfit.</p>
+                        <p>Beautifully structured, hand-knitted accent bags designed for versatility.</p>
                     </div>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="card">
-                    <svg width="100%" height="250"><rect width="100%" height="100%" class="bg-lavender"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#673ab7">Example</text></svg>
-                    <div class="card-info">
+                <div class="item-flow">
+                    <div class="img-wrapper">
+                        <svg viewBox="0 0 100 100"><rect width="100" height="100" class="fill-mist"/></svg>
+                    </div>
+                    <div class="info-flow">
                         <h4>Desk Accessories</h4>
-                        <p>Cozy crochet cup holders and coasters to keep your workspace looking aesthetic.</p>
+                        <p>Tailored soft-woven protective cup sleeves and custom desk mats.</p>
                     </div>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="card">
-                    <svg width="100%" height="250"><rect width="100%" height="100%" class="bg-cloud"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#5e35b1">Example</text></svg>
-                    <div class="card-info">
+                <div class="item-flow">
+                    <div class="img-wrapper">
+                        <svg viewBox="0 0 100 100"><rect width="100" height="100" class="fill-blush"/></svg>
+                    </div>
+                    <div class="info-flow">
                         <h4>Plushies & Bears</h4>
-                        <p>Adorable, soft crocheted teddy bears and custom plush items made to order.</p>
+                        <p>Delicate, premium custom crochet plush toys sculpted symmetrically.</p>
                     </div>
                 </div>
             </div>
 
+            <!-- Professionalized Client Request Frame -->
             <div class="contact-section">
-                <p>Drop a message in our Instagram DMs to check availability or request a custom order.</p>
-                <a href="https://instagram.com/" class="btn" target="_blank">Send a DM to Order</a>
+                <p>To request a custom configuration, bespoke color tailoring, or to acquire a piece from an active lineup, please coordinate your details directly with us.</p>
+                <a href="https://instagram.com/" class="btn" target="_blank">Submit Bespoke Request via DM</a>
             </div>
         </div>
 
@@ -424,19 +358,11 @@
 
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.width = "280px";
+            document.getElementById("mySidenav").style.width = "290px";
         }
 
         function closeNav() {
             document.getElementById("mySidenav").style.width = "0";
-        }
-
-        function openSummerSection() {
-            closeNav();
-            var summerSec = document.getElementById("summerSection");
-            summerSec.style.display = "block";
-            // Smoothly jump down to look at the new section
-            document.getElementById("summer").scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 
