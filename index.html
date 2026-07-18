@@ -16,7 +16,7 @@
             background-color: #fcfaff;
             color: #333;
             line-height: 1.6;
-            overflow-x: hidden; /* Prevent scrolling when menu is open */
+            overflow-x: hidden;
         }
 
         /* --- Header & Logo --- */
@@ -40,11 +40,10 @@
             gap: 15px;
         }
 
-        /* Update this image filename to match your upload exactly */
         .logo-img {
             height: 50px;
             width: auto;
-            border-radius: 50%; /* optional, if you want it circular */
+            display: block;
         }
 
         header h1 {
@@ -67,14 +66,14 @@
         /* --- Side Menu Sidenav --- */
         .sidenav {
             height: 100%;
-            width: 0; /* Default hidden width */
+            width: 0;
             position: fixed;
-            z-index: 2000; /* Higher than header */
+            z-index: 2000;
             top: 0;
             right: 0;
             background-color: #f5eeff;
             overflow-x: hidden;
-            transition: 0.4s; /* Sliding transition */
+            transition: 0.4s;
             padding-top: 60px;
             border-left: 1px solid #ebdfff;
             box-shadow: -4px 0 15px rgba(149, 117, 205, 0.1);
@@ -103,12 +102,10 @@
             color: #9e8fb2;
         }
 
-        /* --- Main Content Styling (Adjust for menu open) --- */
         #main {
             transition: margin-right .4s;
         }
 
-        /* Base Content styling */
         .hero {
             text-align: center;
             padding: 60px 20px;
@@ -245,17 +242,16 @@
         <a href="#more">More</a>
     </div>
 
-    <!-- Header containing Logo and Menu Icon -->
+    <!-- Header -->
     <header>
         <div class="logo-container">
-            <!-- Ensure this filename is correct! -->
-            <img src="WhatsApp Image 2026-07-18 at 1.03.47 AM.jpeg" alt="the.sticheryy Logo" class="logo-img">
+            <img src="Stitchery logo-1.pdf" alt="the.sticheryy Logo" class="logo-img">
             <h1>the.sticheryy</h1>
         </div>
-        <div class="menu-icon" onclick="openNav()">&#9776;</div> <!-- Hamburger icon -->
+        <div class="menu-icon" onclick="openNav()">&#9776;</div>
     </header>
 
-    <!-- Main Content wrapper -->
+    <!-- Main Content -->
     <div id="main">
         <section class="hero">
             <h2>Handmade Crochet Bags & Cute Goods</h2>
@@ -305,18 +301,14 @@
         </footer>
     </div>
 
-    <!-- JavaScript to Handle the Menu Animation -->
+    <!-- JavaScript Side Menu Animations -->
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.width = "250px"; /* Set open width */
-            // optional: pushes the main content to the left
-            // document.getElementById("main").style.marginRight = "250px"; 
+            document.getElementById("mySidenav").style.width = "250px";
         }
 
         function closeNav() {
-            document.getElementById("mySidenav").style.width = "0"; /* Set hidden width */
-            // optional: restores main content margin
-            // document.getElementById("main").style.marginRight = "0";
+            document.getElementById("mySidenav").style.width = "0";
         }
     </script>
 
